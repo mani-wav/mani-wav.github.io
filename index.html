@@ -52,7 +52,7 @@
             <div class="row 50% uniform" style="width: 100%;">
                 <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
                     <span class="image fit">
-                        <video controls autoplay muted loop style="width: 100%; margin-right: 5%;">
+                        <video controls autoplay muted loop style="width: 75%; height:75%; margin-left: 4%;">
                             <source src="videos/demo.mp4" type="video/mp4">
                         </video>
                     </span>
@@ -61,8 +61,8 @@
 
                 <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
                     <span class="image fit">
-                        <video controls autoplay muted loop style="width: 100%; margin-top:5%; margin-right: 5%;">
-                            <source src="videos/white-pan-itw.mp4" type="video/mp4">
+                        <video controls autoplay muted loop style="width: 100%;">
+                            <source src="videos/itw_demos/white-pan-env1.mov" type="video/mp4">
                         </video>
                         <!-- <div style="position: absolute; top: 2%; right: 1%">
                                     <p style="color: white; text-align: center; font-size: 2em">1x</p>
@@ -87,11 +87,11 @@
         </p>
 
         <hr>
-        <h3>Technical Summary Video</h3>
+        <h3>Technical Summary Video (4 min)</h3>
         <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
             <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
                 <span class="image fit">
-                    <video controls muted loop style="width: 80%; margin-top: -2%;">
+                    <video controls loop style="width: 80%; margin-top: -2%;" poster="videos/summary-thumbnail.png">
                         <source src="videos/summary.mp4" type="video/mp4">
                     </video>
                 </span>
@@ -104,11 +104,12 @@
         The robot is tasked to wipe a shape (e.g. heart, square) drawn on a whiteboard. The robot can start in any
         initial configuration above the whiteboard and grasp an eraser in parallel to the board. The main challenge of
         the task is that the robot needs to exert a reasonable amount of contact force on the whiteboard while moving
-        the eraser along the shape. Watch the below video for details of the task and ablations.
+        the eraser along the shape. Watch the below <span style="color:#e0218a">video</span> for details of the task and
+        ablations.
         <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
             <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
                 <span class="image fit">
-                    <video controls muted loop style="width: 80%; margin-top: -2%;">
+                    <video controls loop style="width: 80%; margin-top: -2%;">
                         <source src="videos/tasks/wipe-summary-compressed.mp4" type="video/mp4">
                     </video>
                 </span>
@@ -120,28 +121,33 @@
         The robot is tasked to flip a bagel in a pan from facing down to facing upward using a spatula. To perform this
         task successfully, the robot needs to sense and switch between different contact modes -- precisely insert the
         spatula between the bagel and the pan, maintain the contact while sliding, and start to tilt up the spatula when
-        the bagel is in contact with the edge of the pan. Watch the below video for details of the task and ablations.
+        the bagel is in contact with the edge of the pan. Watch the below <span style="color:#e0218a">video</span> for
+        details of the task and ablations.
         <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
             <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
                 <span class="image fit">
-                    <video controls muted loop style="width: 80%; margin-top: -2%;">
+                    <video controls loop style="width: 80%; margin-top: -2%;">
                         <source src="videos/tasks/flip-summary-compressed.mp4" type="video/mp4">
                     </video>
                 </span>
             </div>
         </div>
 
+        <br>
+
+
         <br><br>
         <h4> (c) Pouring 🎲 </h4>
         The robot is tasked to pick up the white cup and pour dice out to the pink cup if the white cup is not empty.
         When finish pouring, the robot needs to place the empty cup down to a designated location.
         The challenge of the task is that the robot cannot observe whether there are dice in the cup or not given the
-        camera view point both before and after the pouring action. Therefore it needs to leverage a `shaking' action to
-        verify the cup is empty or not. Watch the below video for details of the task and ablations.
+        camera view point both before and after the pouring action, therefore it needs to leverage feedback from
+        vibrations of objects inside the cup. Watch the below <span style="color:#e0218a">video</span> for details of
+        the task and ablations.
         <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
             <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
                 <span class="image fit">
-                    <video controls muted loop style="width: 80%; margin-top: -2%;">
+                    <video controls loop style="width: 80%; margin-top: -2%;">
                         <source src="videos/tasks/pour-summary-compressed.mp4" type="video/mp4">
                     </video>
                 </span>
@@ -150,17 +156,56 @@
 
         <br><br>
         <h4> (d) Taping Wires with Velcro Tape ➰ </h4>
-        The robot is tasked to choose the `hook' tape from several tapes (either 'hook' or 'loop') and strap wires by
-        attaching the 'hook' tape to a `loop' tape underneath the wires.
-        We collect 200 demonstrations in total, with a 'sliding' primitive where we use the tip of the gripper finger to
-        slide along the tape. Watch the below video for details of the task and ablations.
+        The robot is tasked to choose the 'hook' tape from several tapes (either 'hook' or 'loop') and strap wires by
+        attaching the 'hook' tape to a 'loop' tape underneath the wires. The challenge of the task is that the
+        difference between 'loop' and 'hook' tape are not observable with vision, but the subtle difference in surface
+        material can generate different sounds when 'sliding' the gripper finger against the tape. Watch the below <span
+            style="color:#e0218a">video</span> for details of the task and ablations.
         <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
             <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 100%">
                 <span class="image fit">
-                    <video controls muted loop style="width: 80%; margin-top: -2%;">
+                    <video controls loop style="width: 80%; margin-top: -2%;">
                         <source src="videos/tasks/tape-summary-compressed.mp4" type="video/mp4">
                     </video>
                 </span>
+            </div>
+        </div>
+
+        <hr>
+        <h3>More Results</h3>
+        <h4>In-the-Wild Bagel Flipping</h4>
+        <div class="box alt" style="margin-bottom: 1em;">
+            <div class="row 50% uniform" style="width: 100%;">
+                <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/itw_demos/diff-bagel.mov" type="video/mp4"> </video>
+                    </span>
+                    Different Bagels
+                </div>
+                
+                <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/itw_demos/black-pan-env1.mp4" type="video/mp4"> </video>
+                    </span>
+                    Different Pans
+                </div>
+            </div>
+        </div>
+        <div class="box alt" style="margin-bottom: 1em;">
+            <div class="row 50% uniform" style="width: 100%;">
+                <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/itw_demos/white-pan-env1.mov" type="video/mp4"> </video>
+                    </span>
+                    Different Pans
+                </div>
+                
+                <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%; margin-right: 5%;"><source src="videos/itw_demos/gray-pan-env2.mp4" type="video/mp4"> </video>
+                    </span>
+                    Different Environments
+                </div>
             </div>
         </div>
 
