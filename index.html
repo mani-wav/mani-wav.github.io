@@ -70,20 +70,62 @@
                     style="color:#e0218a">V</span>isual Data</h2>
 
             <h3 style="text-align: center; margin-top: -1em; margin-bottom: -1em;">
-                <span style="color: black"><a href="https://lzylucy.github.io/">Zeyi Liu</a> &nbsp&nbsp <a
-                        href="https://cheng-chi.github.io/">Cheng Chi</a>
-                    &nbsp&nbsp <a href="https://eacousineau.com/">Eric Cousineau</a> &nbsp&nbsp <a
-                        href="https://naveenoid.wordpress.com/">Naveen Kuppuswamy</a> &nbsp&nbsp
+                <span style="color: black"><a href="https://lzylucy.github.io/">Zeyi Liu<sup>1</sup></a> &nbsp&nbsp <a
+                        href="https://cheng-chi.github.io/">Cheng Chi<sup>1,2</sup></a>
+                    &nbsp&nbsp <a href="https://eacousineau.com/">Eric Cousineau<sup>3</sup></a> &nbsp&nbsp <a
+                        href="https://naveenoid.wordpress.com/">Naveen Kuppuswamy<sup>3</sup></a> &nbsp&nbsp
                     <br>
-                    <a href="https://www.benburchfiel.com/">Benjamin Burchfiel</a> &nbsp&nbsp <a
-                        href="https://shurans.github.io/">Shuran Song</a> <br>
+                    <a href="https://www.benburchfiel.com/">Benjamin Burchfiel<sup>3</sup></a> &nbsp&nbsp <a
+                        href="https://shurans.github.io/">Shuran Song<sup>1,2</sup></a> <br>
                 </span>
                 <!-- <p style="margin-top:0.25em;"> <span style="color: #8C1515">Stanford University</span> &nbsp&nbsp 
                     <span style="color: #557aa0">Columbia University</span> &nbsp&nbsp
                     <span style="color: #EB0A1E">Toyota Research Institute</span> </p> -->
-                <p style="margin-top:0.25em;">Stanford University &nbsp&nbsp Columbia University &nbsp&nbsp Toyota
-                    Research Institute</p>
+                <p style="margin-top:0.25em;"><sup>1</sup>Stanford University &nbsp&nbsp&nbsp&nbsp <sup>2</sup> Columbia
+                    University &nbsp&nbsp&nbsp&nbsp
+                    <sup>3</sup>Toyota Research Institute
+                </p>
             </h3>
+
+            <div style="text-align:center; margin-bottom: 1em;">
+                <div>
+                    <!-- PDF Link. -->
+                    <span>
+                        <a href="" class="button">
+                            <span class="icon">
+                                <i class="fa fa-file-pdf-o"></i>
+                            </span>
+                            <span>Paper</span>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="" class="button">
+                            <span class="icon">
+                                <i class="fa fa-youtube-play"></i>
+                            </span>
+                            <span>Video</span>
+                        </a>
+                    </span>
+                    <!-- Code Link. -->
+                    <span>
+                        <a href="" class="button">
+                            <span class="icon">
+                                <i class="fa fa-github"></i>
+                            </span>
+                            <span>Code (coming soon)</span>
+                        </a>
+                    </span>
+                    <!-- Dataset Link. -->
+                    <span>
+                        <a href="" class="button">
+                            <span class="icon">
+                                <i class="fa fa-database"></i>
+                            </span>
+                            <span>Dataset</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
 
             <div class="box alt" style="margin-bottom: 1em;">
                 <div class="row 50% uniform" style="width: 100%; color: black;">
@@ -173,7 +215,19 @@
                 </div>
             </div>
 
-            <br><br>
+            <br>
+            <p><span style="color:#e0218a">Key Findings:</span>
+            <ul style="margin-top:-1.5em">
+                <li>Incorporating contact audio as additional source of information improves robustness and
+                    generalizability of the policy. </li>
+                <li>Noise augmentation is an effective strategy to bridge audio domain gap between human collected data
+                    and robot deployment data, and increase the system's robustness to out-of-distribution sounds. </li>
+                <li>Transformer encoder is better for fusing the vision and audio features comparing to using MLP
+                    layers. </li>
+            </ul>
+            </p>
+            <br>
+
             <h4> (b) Flipping Bagel 🥯</h4>
             The robot is tasked to flip a bagel in a pan from facing down to facing upward using a spatula. To perform
             this
@@ -194,8 +248,17 @@
                 </div>
             </div>
 
+            <br>
+            <p><span style="color:#e0218a">Key Findings:</span>
+            <ul style="margin-top:-1.5em">
+                <li>Action diffusion yields better behavior comparing to MLP policy model. </li>
+                <li>Training a transformer audio encoder from scratch yields better performance comparing to using a
+                    CNN-based encoder. </li>
+                <li>In-the-wild data enables generalization to unseen in-the-wild environments. </li>
+            </ul>
+            </p>
 
-            <br><br>
+            <br>
             <h4> (c) Pouring 🎲 </h4>
             The robot is tasked to pick up the white cup and pour dice out to the pink cup if the white cup is not
             empty.
@@ -216,7 +279,17 @@
                 </div>
             </div>
 
-            <br><br>
+            <br>
+            <p><span style="color:#e0218a">Key Findings:</span>
+            <ul style="margin-top:-1.5em">
+                <li>Audio can provide critical state information beyond visual observations. </li>
+                <li>Policy performance is sensitive to audio history length, either too short or too long will hurt
+                    performance. </li>
+            </ul>
+            </p>
+
+            <br>
+
             <h4> (d) Taping Wires with Velcro Tape ➰ </h4>
             The robot is tasked to choose the 'hook' tape from several tapes (either 'hook' or 'loop') and strap wires
             by
@@ -234,6 +307,14 @@
                     </span>
                 </div>
             </div>
+
+            <br>
+            <p><span style="color:#e0218a">Key Findings:</span>
+            <ul style="margin-top:-1.5em">
+                <li>Contact microphone is sufficiently sensitive to different surface materials.</li>
+                <li>Training-time noise augmentation is more effective than test-time noise reduction.</li>
+            </ul>
+            </p>
 
             <hr>
             <h3>More Results</h3>
@@ -280,6 +361,32 @@
                     </div>
                 </div>
             </div>
+            <br>
+
+            <h4>Attention Map Visualization</h4>
+            <div class="box alt" style="margin-bottom: 1em;">
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%">
+                        <span class="image fit" style="margin-bottom: 0.5em;">
+                            <img src="images/audio_attention.png" alt="Description of Image">
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%;">
+                        <p style="color:black; margin-top: 3em;">
+                            Interestingly, we find that a policy co-trained with audio attends more on the
+                            task-relevant regions (shape of drawing or free space inside the pan). In contrast, the
+                            vision only policy often overfits to background structures as an shortcut to estimate
+                            contact (e.g., the edge of the whiteboard, table, and room structures).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h3>Contact</h3>
+            If you have any questions, please feel free to contact <a href="https://lzylucy.github.io/">Zeyi Liu</a>.
+            <br><br>
 
     </div>
 
